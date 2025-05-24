@@ -1,14 +1,14 @@
 import fetch from 'node-fetch';
 import fs from 'fs/promises';
 import path from 'path';
-
-const ownerNumber = '393445461546@s.whatsapp.net'; // Sostituisci con il tuo numero JID
+// import config from '../../config.js'; // Non è più necessario per il controllo owner qui
 
 let handler = async (m, { conn, text, isOwner }) => {
-    if (m.sender !== ownerNumber) {
-        m.reply('Solo il proprietario può usare questo comando.');
-        return;
-    }
+    // const ownerNumber = config.owner[0][0] + '@s.whatsapp.net'; // Rimuovi questa linea
+    // if (m.sender !== ownerNumber) { // Rimuovi questo blocco if
+    //     m.reply('Solo il proprietario può usare questo comando.');
+    //     return;
+    // }
 
     m.reply('Tentativo di aggiornare i plugin dalla repository...');
 
@@ -57,6 +57,6 @@ let handler = async (m, { conn, text, isOwner }) => {
 handler.help = ['aggiorna'];
 handler.tags = ['owner'];
 handler.command = /^aggiorna$/i;
-handler.owner = true;
+handler.owner = true; // Affidati a questo controllo
 
 export default handler;
