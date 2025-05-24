@@ -31,6 +31,7 @@ let handler = async (message, { conn, usedPrefix }) => {
   const commandList = `
 🤖 *𝐌𝐞𝐧𝐮 𝐏𝐫𝐢𝐧𝐜𝐢𝐩𝐚𝐥𝐞* 👤
 ────────────────────────
+
 ➤ ${usedPrefix}𝐩𝐫𝐨𝐩𝐫𝐢𝐞𝐭𝐚𝐫𝐢𝐨 👑
 ➤ ${usedPrefix}𝐟𝐮𝐧𝐳𝐢𝐨𝐧𝐢 🔗
 ➤ ${usedPrefix}𝐚𝐝𝐦𝐢𝐧 👥
@@ -38,7 +39,7 @@ let handler = async (message, { conn, usedPrefix }) => {
 ➤ ${usedPrefix}𝐨𝐰𝐧𝐞𝐫 👑
 ➤ ${usedPrefix}𝐜𝐫𝐞𝐝𝐢𝐭𝐢 💬
 ➤ ${usedPrefix}𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐨 ⚠️
-➤ ${usedPrefix}𝐛𝐨𝐭𝐢𝐧𝐟𝐨 ℹ️     
+➤ ${usedPrefix}𝐢𝐧𝐟𝐨𝐛𝐨𝐭 ℹ️     
 
 ────────────────────────
 ${botName}   -  𝐕𝐞𝐫𝐬𝐢𝐨𝐧𝐞: ${vs}
