@@ -3,6 +3,8 @@ import speed from 'performance-now'
 import { sizeFormatter } from 'human-readable'
 import ws from 'ws'
 import fetch from 'node-fetch'
+import fs from 'fs';
+import path from 'path';
 
 const format = sizeFormatter({
   std: 'JEDEC',
@@ -27,7 +29,17 @@ const handler = async (m, { conn, usedPrefix }) => {
   const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
   const groups = chats.filter(([id]) => id.endsWith('@g.us'))
   const totalChats = Object.keys(global.db.data.chats).length
-  const totalPlugins = Object.values(global.plugins).filter(v => v.help && v.tags).length
+
+  const pluginsDir = './plugins';
+  let totalPlugins = 0;
+
+  try {
+    const files = fs.readdirSync(pluginsDir);
+    totalPlugins = files.filter(file => file.endsWith('.js')).length;
+  } catch (err) {
+    console.error("Errore durante la lettura della cartella plugins:", err);
+    totalPlugins = 'Errore';
+  }
 
   const cpusInfo = cpus().map(cpu => {
     cpu.total = Object.values(cpu.times).reduce((a, b) => a + b, 0)
@@ -63,7 +75,7 @@ const handler = async (m, { conn, usedPrefix }) => {
   let latency = speed() - timestamp
 
   const text = `
-> *🤖 INFO BOT* 
+> *🤖 INFO BOT*
 
 🧩 *Prefisso:* \`${usedPrefix}\`
 📦 *Plugin:* ${totalPlugins}
@@ -79,6 +91,7 @@ const handler = async (m, { conn, usedPrefix }) => {
 🧠 *Velocità:* ${latency.toFixed(2)} ms
 📊 *RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
 📗 *RAM Libera:* ${format(freemem())}
+🔗 *Status:* https://stats.uptimerobot.com/fsZ8sFRH1v
 
 `.trim()
 
