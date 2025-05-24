@@ -1,17 +1,30 @@
-import { join, dirname } from 'path';
+import path, { join, dirname } from 'path';
 import { createRequire } from 'module';
-import { fileURLToPath } from 'url';
+import { fileURLToPath as fileURLToPathNative } from 'node:url';
+import { dirname as dirnameNative } from 'node:path';
 import { setupMaster, fork } from 'cluster';
 import { watchFile, unwatchFile } from 'fs';
 import cfonts from 'cfonts';
 import { createInterface } from 'readline';
 import yargs from 'yargs';
+import express from 'express';
 
 // Configurazioni iniziali
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const require = createRequire(__dirname);
+const __filename = fileURLToPathNative(import.meta.url);
+const __dirname = dirnameNative(__filename);
+const require = createRequire(import.meta.url);
 const { name, author } = require(join(__dirname, './package.json'));
 const rl = createInterface(process.stdin, process.stdout);
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send(`Il bot WhatsApp GIUSEMD è attivo sulla porta "${port}" per qualunque problema contattare l'owner al seguente link: https://wa.me/393445461546`);
+});
+
+app.listen(port, () => {
+  console.log(`Server web in ascolto sulla porta ${port}`);
+});
 
 // Funzione per messaggi animati
 const animatedMessage = (text, font = 'block', colors = ['cyan', 'blue'], align = 'center') => {
@@ -22,7 +35,6 @@ const animatedMessage = (text, font = 'block', colors = ['cyan', 'blue'], align 
     transitionGradient: true,
   });
 };
-
 
 console.clear();
 animatedMessage('Giuse\nBot', 'block', ['magenta', 'cyan']);
@@ -61,6 +73,8 @@ function start(file) {
     console.log('[📩 RICEVUTO]', data);
     switch (data) {
       case 'reset':
+        console.log('🔄 Ricevuto comando di reset. Riavvio del worker...');
+        processInstance.removeAllListeners(); // Rimuovi tutti i listener per evitare comportamenti imprevisti
         processInstance.kill();
         isRunning = false;
         start(file);
@@ -71,16 +85,26 @@ function start(file) {
     }
   });
 
-  processInstance.on('exit', (_, code) => {
+  processInstance.on('exit', (code) => {
     isRunning = false;
-    console.error('❌ Errore inatteso:', code);
+    console.error('❌ Errore inatteso del worker:', code);
 
     if (code !== 0) {
+      console.log('⚠️ Rilevato un errore. Monitoraggio del file per il riavvio automatico...');
       watchFile(args[0], () => {
         unwatchFile(args[0]);
+        console.log('✅ Il file è stato modificato. Tentativo di riavvio del worker...');
         start(file);
       });
     }
+  });
+
+  processInstance.on('error', (err) => {
+    console.error('🚨 Errore nella comunicazione con il worker:', err);
+    isRunning = false;
+    // Potresti implementare qui una logica di riavvio più aggressiva se necessario
+    console.log('⚠️ Tentativo di riavvio del worker a causa di un errore...');
+    start(file);
   });
 
   // Gestione input da console
