@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 
 var handler = async (m, { text, usedPrefix, command }) => {
     if (!text) {
-        await m.reply("Che vuoi?");
+        await m.reply(`Uso corretto del comando: ".bot conosci giusemd?"`);
         return;
     }
 
@@ -30,8 +30,8 @@ var handler = async (m, { text, usedPrefix, command }) => {
     }
 };
 
-handler.command = ['alya', 'Alya'];
-handler.help = ['alya <testo>', 'Alya <testo>'];
+handler.command = ['ai', 'bot', 'giuse', 'Giuse'];
+handler.help = ['giuse <testo>', 'Giuse <testo>'];
 handler.tags = ['tools'];
 handler.premium = false;
 
