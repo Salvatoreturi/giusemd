@@ -5,19 +5,19 @@ let handler = async (m, { conn, text, participants }) => {
     try {
         let users = participants.map(u => conn.decodeJid(u.id));
         let senderMention = `@${m.sender.split('@')[0]}`;
-        let quotedMention = m.quoted ? `Messaggio di @${m.quoted.sender.split('@')[0]}` : '';
+        let quotedMention = m.quoted ? `@${m.quoted.sender.split('@')[0]}` : '';
         let messageText = text || (m.quoted ? m.quoted.text : ""); // Se non c'è testo, prende quello del messaggio citato
 
         // 📌 Formato messaggio
         let formattedMessage = `
-> 📌 *Taggato da:* ${senderMention}
-${quotedMention ? `> 📩 *Citato:* ${quotedMention}` : ''}
-*📩:* ${messageText}
+*Taggato da:* ${senderMention}
+${quotedMention ? `📩 *Quote:* ${quotedMention}` : ''}
+${messageText}
 
 `.trim();
 
         // 📸 Immagine dell'embed (modifica l'URL per cambiarla)
-        let thumbnailUrl = "https://i.ibb.co/tTZsSTrg/paper-sheet-lined-page-isolated-on-transparent-background-png.webp"; 
+        let thumbnailUrl = "https://i.ibb.co/mwpV5NQ/scroll-1f4dc.png"; 
 
         // 🗺️ Messaggio di posizione con immagine personalizzata
         let locationEmbed = {
@@ -29,7 +29,7 @@ ${quotedMention ? `> 📩 *Citato:* ${quotedMention}` : ''}
             },
             message: {
                 locationMessage: {
-                    name: "👀 𝐇𝐢𝐝𝐞𝐓𝐚𝐠",
+                    name: "📜 𝐇𝐢𝐝𝐞𝐓𝐚𝐠",
                     jpegThumbnail: await (await fetch(thumbnailUrl)).buffer(),
                     vcard: `BEGIN:VCARD
 VERSION:3.0
