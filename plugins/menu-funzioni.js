@@ -71,7 +71,7 @@ let handler = async (_0x512ed3, { conn, usedPrefix }) => {
  ${antiArab ? '✅' : '❌'} » *antipaki* 🇮🇹
  ${antiLink ? '✅' : '❌'} » *antilink* 🔗
  ${antiinsta ? '✅' : '❌'} » *antiinsta* 📸
- ${antielimina ? '✅' : '❌'} » *antielimina* ✏️
+ ${antielimina ? '❌' : '✅'} » *antielimina* ✏️
 
 > ℹ️ *Info sulle funzioni:*
 ✅ » Funzione attivata
