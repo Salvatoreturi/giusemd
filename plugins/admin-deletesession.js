@@ -1,1 +1,82 @@
-function _0x1062(){const _0x6769b3=['chat','creds.json','*Utilizza\x20questo\x20comando\x20direttamente\x20nel\x20numero\x20principale\x20del\x20Bot.*','conn','4436MznWuB','command','705555xYYtgl','510419ZBLXwn','owner','651963bbTxZA','jid','https://qu.ax/cSqEs.jpg','users','805YNVIEB',' ꙰ 𝟥𝟥𝟥 ꙰ 𝔹𝕆𝕋 ꙰ ','nomedelbot','admin','8VnDERq','sendMessage','ⓘ\x20𝐎𝐫𝐚\x20𝐬𝐚𝐫𝐚𝐢\x20𝐢𝐧\x20𝐠𝐫𝐚𝐝𝐨\x20𝐝𝐢\x20𝐥𝐞𝐠𝐠𝐞𝐫𝐞\x20𝐢\x20𝐦𝐞𝐬𝐬𝐚𝐠𝐠𝐢\x20𝐝𝐞𝐥\x20𝐛𝐨𝐭','data','Errore','97200oaQGGj','sender','tags','./Sessioni/','10690nacJUs','BEGIN:VCARD\x0aVERSION:3.0\x0aN:;Unlimited;;;\x0aFN:Unlimited\x0aORG:Unlimited\x0aTITLE:\x0aitem1.TEL;waid=19709001746:+1\x20(970)\x20900-1746\x0aitem1.X-ABLabel:Unlimited\x0aX-WA-BIZ-DESCRIPTION:ofc\x0aX-WA-BIZ-NAME:Unlimited\x0aEND:VCARD','395836PPgEPX','50XXWOJP','0@s.whatsapp.net','readdir','ⓘ\x20𝐑𝐢𝐩𝐫𝐢𝐬𝐭𝐢𝐧𝐨\x20𝐝𝐞𝐥𝐥𝐞\x20𝐬𝐞𝐬𝐬𝐢𝐨𝐧𝐢\x20𝐢𝐧\x20𝐜𝐨𝐫𝐬𝐨...','ⓘ\x20𝐒𝐨𝐧𝐨\x20𝐬𝐭𝐚𝐭𝐢\x20𝐞𝐥𝐢𝐦𝐢𝐧𝐚𝐭𝐢\x20','*La\x20cartella\x20Sessioni\x20non\x20esiste\x20o\x20e\x27\x20vuota.*'];_0x1062=function(){return _0x6769b3;};return _0x1062();}const _0x4f712e=_0x3296;(function(_0x3f0502,_0x4730d6){const _0x3f5d17=_0x3296,_0x289d5c=_0x3f0502();while(!![]){try{const _0xf7835e=parseInt(_0x3f5d17(0x196))/0x1+-parseInt(_0x3f5d17(0x198))/0x2+-parseInt(_0x3f5d17(0x185))/0x3+-parseInt(_0x3f5d17(0x180))/0x4*(-parseInt(_0x3f5d17(0x189))/0x5)+parseInt(_0x3f5d17(0x192))/0x6+-parseInt(_0x3f5d17(0x183))/0x7*(parseInt(_0x3f5d17(0x18d))/0x8)+-parseInt(_0x3f5d17(0x182))/0x9*(-parseInt(_0x3f5d17(0x199))/0xa);if(_0xf7835e===_0x4730d6)break;else _0x289d5c['push'](_0x289d5c['shift']());}catch(_0x1cfdf2){_0x289d5c['push'](_0x289d5c['shift']());}}}(_0x1062,0x1aaca));import{readdirSync,unlinkSync,existsSync,promises as _0x4053a6,rmSync}from'fs';import _0x154140 from'path';function _0x3296(_0x3b72fd,_0x2133de){const _0x10621b=_0x1062();return _0x3296=function(_0x329665,_0xa6f3b4){_0x329665=_0x329665-0x17d;let _0x53eee8=_0x10621b[_0x329665];return _0x53eee8;},_0x3296(_0x3b72fd,_0x2133de);}const handler=async(_0x242462,{conn:_0x3de9bb,usedPrefix:_0x5601c8})=>{const _0x3477d3=_0x3296;if(global[_0x3477d3(0x17f)]['user'][_0x3477d3(0x186)]!==_0x3de9bb['user'][_0x3477d3(0x186)])return _0x3de9bb['sendMessage'](_0x242462['chat'],{'text':_0x3477d3(0x17e)},{'quoted':_0x242462});await _0x3de9bb[_0x3477d3(0x18e)](_0x242462[_0x3477d3(0x19f)],{'text':_0x3477d3(0x19c)},{'quoted':_0x242462});const _0x4d615c=_0x3477d3(0x195);try{if(!existsSync(_0x4d615c))return await _0x3de9bb[_0x3477d3(0x18e)](_0x242462[_0x3477d3(0x19f)],{'text':_0x3477d3(0x19e)},{'quoted':_0x242462});const _0x3c4101=await _0x4053a6[_0x3477d3(0x19b)](_0x4d615c);let _0x13f91a=0x0;for(const _0x365736 of _0x3c4101){_0x365736!==_0x3477d3(0x17d)&&(await _0x4053a6['unlink'](_0x154140['join'](_0x4d615c,_0x365736)),_0x13f91a++);}_0x13f91a===0x0?await _0x3de9bb[_0x3477d3(0x18e)](_0x242462[_0x3477d3(0x19f)],{'text':'ⓘ\x20𝐋𝐞\x20𝐬𝐞𝐬𝐬𝐢𝐨𝐧𝐢\x20𝐬𝐨𝐧𝐨\x20𝐯𝐮𝐨𝐭𝐞\x20‼️'},{'quoted':_0x242462}):await _0x3de9bb[_0x3477d3(0x18e)](_0x242462[_0x3477d3(0x19f)],{'text':_0x3477d3(0x19d)+_0x13f91a+'\x20𝐚𝐫𝐜𝐡𝐢𝐯𝐢\x20𝐧𝐞𝐥𝐥𝐞\x20𝐬𝐞𝐬𝐬𝐢𝐨𝐧𝐢'},{'quoted':_0x242462});}catch(_0x5f33bf){console['error']('Err-ore',_0x5f33bf),await _0x3de9bb[_0x3477d3(0x18e)](_0x242462[_0x3477d3(0x19f)],{'text':_0x3477d3(0x191)},{'quoted':_0x242462});}const _0x4033bf=global['db'][_0x3477d3(0x190)][_0x3477d3(0x188)][_0x242462[_0x3477d3(0x193)]];let _0xb6609d=global['db'][_0x3477d3(0x190)][_0x3477d3(0x18b)]||_0x3477d3(0x18a),_0xc3323b={'key':{'participants':_0x3477d3(0x19a),'fromMe':![],'id':'Halo'},'message':{'locationMessage':{'name':''+_0xb6609d,'jpegThumbnail':await(await fetch(_0x3477d3(0x187)))['buffer'](),'vcard':_0x3477d3(0x197)}},'participant':'0@s.whatsapp.net'};await _0x3de9bb['sendMessage'](_0x242462[_0x3477d3(0x19f)],{'text':_0x3477d3(0x18f)},{'quoted':_0xc3323b});};handler['help']=['del_reg_in_session_owner'],handler[_0x4f712e(0x194)]=[_0x4f712e(0x184)],handler[_0x4f712e(0x181)]=/^(deletession|ds|clearallsession)$/i,handler[_0x4f712e(0x18c)]=!![];export default handler;
+import { existsSync, promises as _0x4053a6 } from 'fs';
+import _0x154140 from 'path';
+const handler = async (_0x242462, {
+  conn: _0x3de9bb,
+  usedPrefix: _0x5601c8
+}) => {
+  if (global.conn.user.jid !== _0x3de9bb.user.jid) {
+    return _0x3de9bb.sendMessage(_0x242462.chat, {
+      'text': "*Utilizza questo comando direttamente nel numero principale del Bot.*"
+    }, {
+      'quoted': _0x242462
+    });
+  }
+  await _0x3de9bb.sendMessage(_0x242462.chat, {
+    'text': "ⓘ 𝐑𝐢𝐩𝐫𝐢𝐬𝐭𝐢𝐧𝐨 𝐝𝐞𝐥𝐥𝐞 𝐬𝐞𝐬𝐬𝐢𝐨𝐧𝐢 𝐢𝐧 𝐜𝐨𝐫𝐬𝐨..."
+  }, {
+    'quoted': _0x242462
+  });
+  try {
+    if (!existsSync("./Sessioni/")) {
+      return await _0x3de9bb.sendMessage(_0x242462.chat, {
+        'text': "*La cartella Sessioni non esiste o e' vuota.*"
+      }, {
+        'quoted': _0x242462
+      });
+    }
+    const _0x3c4101 = await _0x4053a6.readdir("./Sessioni/");
+    let _0x13f91a = 0x0;
+    for (const _0x365736 of _0x3c4101) {
+      if (_0x365736 !== "creds.json") {
+        await _0x4053a6.unlink(_0x154140.join("./Sessioni/", _0x365736));
+        _0x13f91a++;
+      }
+    }
+    if (_0x13f91a === 0x0) {
+      await _0x3de9bb.sendMessage(_0x242462.chat, {
+        'text': "ⓘ 𝐋𝐞 𝐬𝐞𝐬𝐬𝐢𝐨𝐧𝐢 𝐬𝐨𝐧𝐨 𝐯𝐮𝐨𝐭𝐞 ‼️"
+      }, {
+        'quoted': _0x242462
+      });
+    } else {
+      await _0x3de9bb.sendMessage(_0x242462.chat, {
+        'text': "ⓘ 𝐒𝐨𝐧𝐨 𝐬𝐭𝐚𝐭𝐢 𝐞𝐥𝐢𝐦𝐢𝐧𝐚𝐭𝐢 " + _0x13f91a + " 𝐚𝐫𝐜𝐡𝐢𝐯𝐢 𝐧𝐞𝐥𝐥𝐞 𝐬𝐞𝐬𝐬𝐢𝐨𝐧𝐢"
+      }, {
+        'quoted': _0x242462
+      });
+    }
+  } catch (_0x5f33bf) {
+    console.error('Err-ore', _0x5f33bf);
+    await _0x3de9bb.sendMessage(_0x242462.chat, {
+      'text': "Errore"
+    }, {
+      'quoted': _0x242462
+    });
+  }
+  let _0xb6609d = global.db.data.nomedelbot || " ꧁ ĝ̽̓̀͑ỉ͔͖̜͌ư̡͕̭̇s̠҉͍͊ͅẹ̿͋̒̕ẹ̿͋̒̕ ꧂ 「 ᵇᵒᵗ 」 ";
+  let _0xc3323b = {
+    'key': {
+      'participants': "0@s.whatsapp.net",
+      'fromMe': false,
+      'id': 'Halo'
+    },
+    'message': {
+      'locationMessage': {
+        'name': '' + _0xb6609d,
+        'jpegThumbnail': await (await fetch("https://qu.ax/cSqEs.jpg")).buffer(),
+        'vcard': "BEGIN:VCARD\nVERSION:3.0\nN:;Unlimited;;;\nFN:Unlimited\nORG:Unlimited\nTITLE:\nitem1.TEL;waid=19709001746:+1 (970) 900-1746\nitem1.X-ABLabel:Unlimited\nX-WA-BIZ-DESCRIPTION:ofc\nX-WA-BIZ-NAME:Unlimited\nEND:VCARD"
+      }
+    },
+    'participant': '0@s.whatsapp.net'
+  };
+  await _0x3de9bb.sendMessage(_0x242462.chat, {
+    'text': "ⓘ 𝐎𝐫𝐚 𝐬𝐚𝐫𝐚𝐢 𝐢𝐧 𝐠𝐫𝐚𝐝𝐨 𝐝𝐢 𝐥𝐞𝐠𝐠𝐞𝐫𝐞 𝐢 𝐦𝐞𝐬𝐬𝐚𝐠𝐠𝐢 𝐝𝐞𝐥 𝐛𝐨𝐭"
+  }, {
+    'quoted': _0xc3323b
+  });
+};
+handler.help = ['del_reg_in_session_owner'];
+handler.tags = ["owner"];
+handler.command = /^(deletession|ds|clearallsession)$/i;
+handler.admin = true;
+export default handler;
