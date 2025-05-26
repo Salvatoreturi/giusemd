@@ -8,7 +8,7 @@ global.confirmCode = ""
 
 global.owner = [
     ['393445461546', '꧁ 👑 Proprietario¹ 👑꧂', true],
-    ['393272790038', '꧁ 👑 Proprietario² 👑꧂', true],
+    ['393927832813', '꧁ 👑 Proprietario² 👑꧂', true],
     ['19173829810', '꧁ 👑 Proprietario³ 👑꧂', true],
 ] //Numero degli owner
 
