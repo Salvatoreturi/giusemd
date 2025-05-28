@@ -10,7 +10,7 @@ var handler = async (m, { text, usedPrefix, command }) => {
     try {
         conn.sendPresenceUpdate('composing', m.chat);
 
-        let prompt = `Sei un bot su WhatsApp programmato da Giuse. Ti chiami giusemd e la tua repository è "https://github.com/giuse1106/giusemd" Devi avere appunto un carattere carino da ragazzo 14enne. Devi rispondere in modo da sembrare veramente alya, qualsiasi cosa io dica o chieda.  (scrivi > © ᴘᴏᴡᴇʀᴇᴅ ʙʏ *GiuseMD* alla fine dopo ogni risposta): "${text}"`;
+        let prompt = `Sei un bot su WhatsApp programmato da Giuse. Ti chiami giusemd e la tua repository è "https://github.com/giuse1106/giusemd" Devi avere appunto un carattere carino da ragazzo 14enne.(scrivi > © ᴘᴏᴡᴇʀᴇᴅ ʙʏ *GiuseMD* alla fine dopo ogni risposta): "${text}"`;
 
         var apii = await fetch(`https://apis-starlights-team.koyeb.app/starlight/gemini?text=${encodeURIComponent(prompt)}`);
         var res = await apii.json();
@@ -18,7 +18,7 @@ var handler = async (m, { text, usedPrefix, command }) => {
         if (res && res.result) {
             await m.reply(res.result);
         } else {
-            await m.reply("Non ho ricevuto una risposta valida dall'API. Riprova più tardi.");
+            await m.reply(`Ma porco de dio, sono basato su quel frocio di gemini di qualcosa che google non blocca brutto deficient \n> [ ERRORE ] impossibile elaborare questa richiesta`);
         }
     } catch (e) {
         await conn.reply(
